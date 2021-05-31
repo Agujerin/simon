@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simón Dice</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+<body>
+    <!-- PRÁCTICA 4: Simón dice -->
+    <header class="main">
+        <h1 class="title">SIMÓN DICE</h1>
+        <h4 class="rules">Ingrese su nombe. Toque el botón de encendido. Repita la secuencia de colores indicada. Cada acierto equivale a 1 punto, el jugador que más puntos logre liderará el ranking.</h4>
+        <form action="submit" class="main-form" id="main-form">
+            <input type="text" placeholder="Escriba su nombre" class="main-form__input">
+            <button type="submit" class="main-form__button">Ingresar</button>
+            <i class="fas fa-list-ol" title="Abrir Ranking" id="open-rank"></i>
+        </form>
+    </header>
+    
+    <div class="position-container">
+    
+        <div class="game-container">
+            <div class="game-data">
+                <h3 class="player-title">P1:</h3>
+                <h3 class="player-name" id="player-name"></h3>
+                <h3 class="points-title">NIVEL:</h3>
+                <h3 class="points" id="points">10</h3>
+            </div>
+        
+            <div class="circle" id="circle">
+                <div class="green" id="green" title="green"></div>
+                <div class="red" id="red" title="red"></div>
+                <div class="blue" id="blue" title="blue"></div>
+                <div class="yellow" id="yellow" title="yellow"></div>
+                <div class="power" id="power-btn">
+                    <i class="fas fa-power-off"></i>
+                </div>
+            </div>     
+        </div>
+    
+        <aside class="ranking-container" id="ranking-container">
+            <div class="ranking">
+                <h5 class="ranking-title">RANKING</h5>
+                <ol class="ordered-list" id="ranking">
+                </ol>
+            </div>
+        </aside>
+    </div>
+    
+    <div class="end-game" id="end-sign">
+        <p class="end-game-text" id="sign-text"></p>
+        <i class="fas fa-redo" id="reload"></i>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
